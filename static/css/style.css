@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+    
+}
+
+/*** home page style ***/
+
+section{
+    display: flex;
+    
+}
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 10px;
+    background-image: url(/static/images/banner.png);
+}
+
+.title{
+    font-size: 38px;
+    color: rgb(255, 196, 0);
+    margin-left:20px;
+    position: absolute;
+    top: 15px;
+    text-shadow: 5px 2px  black;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    position: absolute;
+    bottom: 15px;
+}
+
+ header a{
+    box-shadow:1px 1px  black;
+    margin: 0 5px 50px;
+    padding: 2px;
+    background-color: rgb(255, 196, 0);
+    border: 1px solid black;
+    text-decoration: none;
+    
+}
+
+#search{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+
+article,.product{
+    border: 1px solid black;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.product{
+    width: 290px;
+    height: 470px;
+    margin: 12px;
+    padding: 10px 0 10px 10px;
+    position: relative;
+}
+
+h3,h4{
+    margin-bottom: 20px;
+}
+
+.prix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 8px;
+    width:75px;
+    background-color: rgb(255, 196, 0);
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+
+.add{
+    border: 1px solid black;
+    border-radius: 20px;
+    position:absolute;
+    top:43px;
+    right:5px;
+    width: 40px;
+    height: 40px;
+}
+
+.pcs{
+    height: 200px;
+    width: 190px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 33px;
+    background-color: rgb(255, 196, 0, 0.75);
+}
+ 
+/*** panier page style ***/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside{
+    
+    margin-left: 5px;
+    border: 1px solid black;
+    width: 50vw;
+    height: 600px;
+    position: relative;
+    overflow: scroll;
+}
+
+.prodimg{
+    height: 38px;
+    width: 39px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.prodremove{
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    
+
+}
+.titre{
+    background-color: rgb(255, 196, 0);
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.holder{
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    margin-top: 5px;
+    height: 40px;
+    
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: rgb(255, 196, 0);
+    text-align: center;
+}
+
+.holder .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*** contact page style ***/
+
+form{
+    width:700px;
+    border: solid 1px grey;
+    margin: 10px auto ;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+.send{
+    width: 60px;
+    height: 30px;
+}
+
+form h1{
+    text-align: center;
+    color:rgb(255, 196, 0, 2);
+    text-shadow: 2px 2px black;
+}

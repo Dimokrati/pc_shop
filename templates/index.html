@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    HOME
+{% endblock %}
+
+
+
+{% block title %}
+<h1 class="title">HOME</h1>    
+{% endblock %}
+
+{% block section %}
+<section>
+    <article>
+        {% for prod in product %}
+        <div class="product">
+            <img class="pcs" src="{{url_for('static',filename='images/'+prod['image'])}}" alt="">
+            <h3>{{prod.marque}}</h3>
+            <h4>{{prod.model}}</h4>
+            <p>{{prod.description}}</p>
+            <a href="/add/{{prod.image}}/{{prod.id}}/{{prod.marque}}/{{prod.model}}" name="add"><img class="add" src="{{url_for('static',filename='images/add.png')}}" alt=""></a>
+            <div class="prix">{{prod.prix}}Dh</div>
+        </div>
+        {% endfor %}
+    </article>
+</section>
+{% endblock %}
+
+

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h1 class="title">MON PANIER</h1>    
+{% endblock %}
+
+{% block section %}
+<div class="container">
+    <aside>
+        <div class="titre">MON PANIER</div>
+        <div class="bighold">
+        {% for item in sold %}
+        <div class="holder">
+            <div class=" item">
+                <img class="prodimg" src="{{url_for('static',filename='images/'+item['image'])}}" alt=""> 
+            </div>
+            <div class="pi item">#{{item.id}}</div>
+            <div class="pi item">{{item.marque}}</div>
+            <div class="pi item">{{item.model}}</div>
+            <div class="item">
+                <a href="/remove/{{sold.index(item)}}"><img class="prodremove" src="{{url_for('static',filename='images/remove.png')}}" alt=""></a>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </aside>
+</div>
+{% endblock %}
